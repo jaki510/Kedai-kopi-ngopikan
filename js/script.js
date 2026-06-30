@@ -21,8 +21,10 @@ document.querySelector("#search-button").onclick = (e) => {
 const shoppingCart = document.querySelector(".shopping-cart");
 
 //ketika shopping cart menu di klik
-document.querySelector("#shopping-cart-button").onclick = () => {
+document.querySelector("#shopping-cart-button").onclick = (e) => {
   shoppingCart.classList.toggle("active");
+  shoppingCart.focus();
+  e.preventDefault();
 };
 
 //klik di luar elemen
