@@ -106,11 +106,9 @@ TOTAL: ${rupiah(obj.total)}
 Terima Kasih.`;
 };
 
-// konversi mata uang
-const rupiah = (number) => {
+function rupiah(number) {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
-    // minimumFractionDigits: 0,
   }).format(number);
-};
+}
